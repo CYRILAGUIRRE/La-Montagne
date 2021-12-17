@@ -38,6 +38,7 @@ header {
     width: 90%;
     height: 60px;
     background: rgba(255, 255, 255, 0.137);
+    font-size: 0.8rem;
 
     ul {
       display: flex;
@@ -45,9 +46,64 @@ header {
 
       li {
         color: white;
-        justify-content: space-around;
-        margin: 0 10px;
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-weight: bold;
+
+        &:first-child {
+          background: white;
+          color: black;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
+
+      & li:hover {
+        height: 60px;
+        color: black;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:hover li:not(:hover) {
+        background: none;
+        color: white;
+      }
+    }
+  }
+
+  .nav-left li {
+    padding: 20px;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    min-width: 100px;
+
+    & li {
+      padding: 0 10px;
+    }
+
+    & ul li:first-child {
+      background: none;
+      color: white;
+    }
+
+    & li:hover {
+      transform: scale(1.5);
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
