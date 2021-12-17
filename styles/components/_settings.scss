@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../../assets/font/Merriweather-Regular.ttf);
+}
+
+@font-face {
+  font-family: "font-2";
+  src: url(../../assets/font/Merriweather-LightItalic.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$font-1: "font-1", sans-serif;
+$font-2: "font-2", sans-serif;
+
+body {
+  background: url(../../assets/img/bg.jpg) fixed top/cover;
+  font-family: $font-1;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  background: transparent;
+  color: white;
+}
+
+p {
+  font-family: $font-2;
+}
+
+button {
+  height: 40px;
+  width: 160px;
+  background: white;
+  border-style: 3px solid;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}

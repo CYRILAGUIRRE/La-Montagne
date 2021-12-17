@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../../assets/font/Merriweather-Regular.ttf);
+}
+
+@font-face {
+  font-family: "font-2";
+  src: url(../../assets/font/Merriweather-LightItalic.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url(../../assets/img/bg.jpg) fixed top/cover;
+  font-family: "font-1", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  background: transparent;
+  color: white;
+}
+
+p {
+  font-family: "font-2", sans-serif;
+}
+
+button {
+  height: 40px;
+  width: 160px;
+  background: white;
+  border-style: 3px solid;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+header {
+  height: 100vh;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+header h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+}
+
+header p {
+  color: white;
+  font-family: "font-2";
+}
+
+header button {
+  background: transparent;
+  border: transparent;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.137);
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul li {
+  color: white;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 10px;
+}
+
+main {
+  width: 90%;
+  background: white;
+  margin: 0 auto;
+}
+
+main .card-1 {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+}
+
+main .date {
+  text-align: center;
+  position: relative;
+  width: 120px;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+
+main .date::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 350%;
+  background: darkgray;
+  top: 50%;
+  left: -360%;
+}
+
+main .date::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 350%;
+  background: darkgray;
+  top: 50%;
+  right: -360%;
+}
+
+main h2 {
+  font-size: 2em;
+}
+
+main p {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 40px;
+  padding-bottom: 60px;
+}
+
+main img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .part-2-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin-top: 60px;
+}
+
+main .part-2-cards div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .part-2-cards div p {
+  width: 85%;
+  text-align: center;
+}
+
+main .part-2-cards div h3 {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
