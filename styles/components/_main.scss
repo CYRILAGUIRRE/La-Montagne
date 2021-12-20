@@ -1,19 +1,12 @@
 main {
   width: 90%;
-  background: white;
+  background: rgb(240, 237, 237);
   margin: 0 auto;
-
-  @media screen and (max-width: 750px) {
-    .date {
-      width: 30%;
-      font-size: 0.8rem;
-    }
-  }
 
   .card-1 {
     margin: 0 auto;
     text-align: center;
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid $color-line;
     padding-bottom: 40px;
   }
 
@@ -47,7 +40,6 @@ main {
 
   h2 {
     font-size: 3em;
-
     width: 50%;
     min-width: 412px;
     max-width: 500px;
@@ -60,17 +52,29 @@ main {
     width: 35%;
     margin: 0 auto;
     line-height: 35px;
+    padding-top: 30px;
     padding-bottom: 60px;
+  }
+
+  .card-container {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 100%;
+    height: 100%;
     margin: auto;
-    margin-bottom: 40px;
     object-fit: cover;
+    transition: 0.5s ease;
+
+    &:hover {
+      transform: scale(2);
+    }
   }
 
   .part-2-cards {
@@ -98,20 +102,44 @@ main {
 
       h3 {
         text-align: center;
-        padding: 20px 0 40px 0;
+        padding: 40px 0 40px 0;
       }
     }
     .card-2 {
       border-right: 1px solid $color-line;
     }
   }
+
   button {
     font-weight: bold;
-    border-style: 4px solid;
+    border: 3px solid;
+    background: none;
+    margin-top: 40px;
   }
 
   .card-2 {
     border-bottom: 1px solid $color-line;
     border-right: none;
+  }
+  @media screen and (max-width: 750px) {
+    .date {
+      font-size: 0.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      width: 80%;
+    }
+    .part-2-cards {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      padding: 40px 0 40px 0;
+    }
   }
 }

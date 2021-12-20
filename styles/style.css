@@ -308,21 +308,14 @@ header .nav-right li:hover {
 
 main {
   width: 90%;
-  background: white;
+  background: #f0eded;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 750px) {
-  main .date {
-    width: 30%;
-    font-size: 0.8rem;
-  }
 }
 
 main .card-1 {
   margin: 0 auto;
   text-align: center;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 1px solid rgba(214, 207, 207, 0.651);
   padding-bottom: 40px;
 }
 
@@ -368,7 +361,14 @@ main p {
   width: 35%;
   margin: 0 auto;
   line-height: 35px;
+  padding-top: 30px;
   padding-bottom: 60px;
+}
+
+main .card-container {
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 main img {
@@ -381,11 +381,18 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 85%;
+  width: 100%;
+  height: 100%;
   margin: auto;
-  margin-bottom: 40px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+main img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 main .part-2-cards {
@@ -426,7 +433,7 @@ main .part-2-cards div p {
 
 main .part-2-cards div h3 {
   text-align: center;
-  padding: 20px 0 40px 0;
+  padding: 40px 0 40px 0;
 }
 
 main .part-2-cards .card-2 {
@@ -435,12 +442,40 @@ main .part-2-cards .card-2 {
 
 main button {
   font-weight: bold;
-  border-style: 4px solid;
+  border: 3px solid;
+  background: none;
+  margin-top: 40px;
 }
 
 main .card-2 {
   border-bottom: 1px solid rgba(214, 207, 207, 0.651);
   border-right: none;
+}
+
+@media screen and (max-width: 750px) {
+  main .date {
+    font-size: 0.8rem;
+  }
+  main h2 {
+    font-size: 2rem;
+  }
+  main p {
+    width: 80%;
+  }
+  main .part-2-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main h3 {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    padding: 40px 0 40px 0;
+  }
 }
 
 footer {
@@ -510,6 +545,7 @@ footer form textarea {
 footer form button {
   margin: 20px 0;
   width: 160px;
+  border: 2px solid black;
 }
 
 footer .social {
