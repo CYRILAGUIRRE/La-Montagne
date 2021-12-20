@@ -8,16 +8,55 @@
   src: url(../../assets/font/Merriweather-LightItalic.ttf);
 }
 
+@font-face {
+  font-family: "font-3";
+  src: url(../../assets/font/MerriweatherSans-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: url(../../assets/img/bg.jpg) fixed top/cover;
   font-family: "font-1", sans-serif;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #1e252d;
+  -webkit-animation: animBefore 1.5s ease forwards;
+          animation: animBefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
 }
 
 li {
@@ -34,12 +73,22 @@ p {
 }
 
 button {
-  height: 40px;
+  height: 50px;
   width: 140px;
   background: white;
   border-style: 3px solid;
   margin: 0 auto;
   margin-bottom: 60px;
+  cursor: pointer;
+}
+
+label,
+h4,
+h1,
+h2,
+h3 {
+  font-family: "font-3", sans-serif;
+  font-weight: bolder;
 }
 
 header {
@@ -55,23 +104,57 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-animation: headerAnim 1.5s forwards;
+          animation: headerAnim 1.5s forwards;
+}
+
+@-webkit-keyframes headerAnim {
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    opacity: 1;
+  }
+}
+
+@keyframes headerAnim {
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    opacity: 1;
+  }
 }
 
 header h1 {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  margin: 40px auto;
 }
 
 header p {
   color: white;
   font-family: "font-2";
+  font-size: 1.5rem;
 }
 
-header button {
+header span {
   background: transparent;
   border: transparent;
+}
+
+header span:hover {
+  cursor: pointer;
+}
+
+header span img {
+  padding-top: 50px;
+}
+
+header span img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 header nav {
@@ -89,14 +172,20 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 90%;
-  height: 60px;
+  height: 70px;
   background: rgba(255, 255, 255, 0.137);
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 750px) {
+  header nav {
+    display: none;
+  }
 }
 
 header nav ul {
@@ -114,19 +203,21 @@ header nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "font-3", sans-serif;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 header nav ul li:first-child {
   background: white;
   color: black;
-  height: 60px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +230,7 @@ header nav ul li:first-child {
 }
 
 header nav ul li:hover {
-  height: 60px;
+  height: 70px;
   color: black;
   background: white;
   display: -webkit-box;
@@ -159,7 +250,8 @@ header nav ul:hover li:not(:hover) {
 }
 
 header .nav-left li {
-  padding: 20px;
+  min-width: 150px;
+  margin: 0 auto;
 }
 
 header .nav-right {
@@ -174,6 +266,7 @@ header .nav-right {
           align-items: center;
   max-width: 250px;
   min-width: 100px;
+  padding-right: 20px;
 }
 
 header .nav-right li {
@@ -200,10 +293,30 @@ header .nav-right li:hover {
           align-items: center;
 }
 
+@media screen and (max-width: 750px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 0.8rem;
+    line-height: 30px;
+  }
+  header span {
+    display: none;
+  }
+}
+
 main {
   width: 90%;
   background: white;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 750px) {
+  main .date {
+    width: 30%;
+    font-size: 0.8rem;
+  }
 }
 
 main .card-1 {
@@ -216,7 +329,7 @@ main .card-1 {
 main .date {
   text-align: center;
   position: relative;
-  width: 120px;
+  width: 20%;
   padding: 80px 0;
   margin: 0 auto;
 }
@@ -225,28 +338,34 @@ main .date::before {
   content: "";
   position: absolute;
   height: 1px;
-  width: 350%;
-  background: darkgray;
+  width: 170%;
+  background: rgba(214, 207, 207, 0.651);
   top: 50%;
-  left: -360%;
+  left: -180%;
 }
 
 main .date::after {
   content: "";
   position: absolute;
   height: 1px;
-  width: 350%;
-  background: darkgray;
+  width: 170%;
+  background: rgba(214, 207, 207, 0.651);
   top: 50%;
-  right: -360%;
+  right: -180%;
 }
 
 main h2 {
-  font-size: 2em;
+  font-size: 3em;
+  width: 50%;
+  min-width: 412px;
+  max-width: 500px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
 }
 
 main p {
-  width: 50%;
+  width: 35%;
   margin: 0 auto;
   line-height: 35px;
   padding-bottom: 60px;
@@ -311,7 +430,17 @@ main .part-2-cards div h3 {
 }
 
 main .part-2-cards .card-2 {
-  border-right: 1px solid darkgray;
+  border-right: 1px solid rgba(214, 207, 207, 0.651);
+}
+
+main button {
+  font-weight: bold;
+  border-style: 4px solid;
+}
+
+main .card-2 {
+  border-bottom: 1px solid rgba(214, 207, 207, 0.651);
+  border-right: none;
 }
 
 footer {
@@ -329,6 +458,15 @@ footer {
   margin: 15px auto;
   margin-bottom: 40px;
   background: white;
+}
+
+@media screen and (max-width: 860px) {
+  footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 footer form {
@@ -358,6 +496,7 @@ footer form input {
   width: 100%;
   height: 40px;
   margin: 20px auto;
+  border-color: rgba(214, 207, 207, 0.651);
 }
 
 footer form textarea {
@@ -365,10 +504,12 @@ footer form textarea {
   min-width: 100%;
   max-width: 100%;
   margin: 20px auto;
+  border-color: rgba(214, 207, 207, 0.651);
 }
 
 footer form button {
   margin: 20px 0;
+  width: 160px;
 }
 
 footer .social {
@@ -376,7 +517,7 @@ footer .social {
   display: grid;
   -ms-grid-rows: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;
-  border-left: 1px solid black;
+  border-left: 1px solid rgba(214, 207, 207, 0.651);
   height: 100%;
 }
 
@@ -388,23 +529,31 @@ footer .social div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(214, 207, 207, 0.651);
 }
 
 footer .social div h4 {
   padding: 0 60px;
 }
 
+footer .social div p {
+  color: #5a5a5a;
+}
+
+footer .social .address p {
+  margin-top: 18px;
+}
+
 footer .social .mail p {
   font-family: "font-1", sans-serif;
-  -webkit-text-decoration: underline black;
-          text-decoration: underline black;
+  -webkit-text-decoration: underline rgba(214, 207, 207, 0.651);
+          text-decoration: underline rgba(214, 207, 207, 0.651);
   text-underline-position: under;
 }
 
-footer .social .phone {
-  -webkit-text-decoration: underline black;
-          text-decoration: underline black;
+footer .social .phone p {
+  -webkit-text-decoration: underline rgba(214, 207, 207, 0.651);
+          text-decoration: underline rgba(214, 207, 207, 0.651);
   text-underline-position: under;
 }
 
@@ -423,11 +572,12 @@ footer .social .soc-logo ul {
 }
 
 footer .social .soc-logo ul li {
-  padding: 0 10px 0;
+  padding: 0 5px;
 }
 
 footer .social .soc-logo ul li img {
-  border: 1px solid black;
+  border: 1px solid;
+  border-color: rgba(214, 207, 207, 0.651);
   width: 40px;
   border-radius: 150px;
 }

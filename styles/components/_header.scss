@@ -5,25 +5,45 @@ header {
   align-items: center;
   display: flex;
   position: relative;
+  animation: headerAnim 1.5s forwards;
 
-  .title {
+  @keyframes headerAnim {
+    100% {
+      transform: translateY(-40px);
+      opacity: 1;
+    }
   }
 
   h1 {
     color: white;
     text-transform: uppercase;
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    margin: 40px auto;
   }
 
   p {
     color: white;
     font-family: "font-2";
+    font-size: 1.5rem;
   }
 
-  button {
+  span {
     background: transparent;
     border: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      padding-top: 50px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   nav {
@@ -32,13 +52,17 @@ header {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    height: 60px;
+    height: 70px;
     background: rgba(255, 255, 255, 0.137);
     font-size: 0.8rem;
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -48,15 +72,16 @@ header {
         color: white;
         background: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-
+        font-family: $font-3;
         font-weight: bold;
+        letter-spacing: 1px;
 
         &:first-child {
           background: white;
           color: black;
-          height: 60px;
+          height: 70px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -64,7 +89,7 @@ header {
       }
 
       & li:hover {
-        height: 60px;
+        height: 70px;
         color: black;
         background: white;
         display: flex;
@@ -79,7 +104,8 @@ header {
   }
 
   .nav-left li {
-    padding: 20px;
+    min-width: 150px;
+    margin: 0 auto;
   }
 
   .nav-right {
@@ -88,6 +114,7 @@ header {
     align-items: center;
     max-width: 250px;
     min-width: 100px;
+    padding-right: 20px;
 
     & li {
       padding: 0 10px;
@@ -104,6 +131,18 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 0.8rem;
+      line-height: 30px;
+    }
+    span {
+      display: none;
     }
   }
 }

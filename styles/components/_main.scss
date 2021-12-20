@@ -3,6 +3,13 @@ main {
   background: white;
   margin: 0 auto;
 
+  @media screen and (max-width: 750px) {
+    .date {
+      width: 30%;
+      font-size: 0.8rem;
+    }
+  }
+
   .card-1 {
     margin: 0 auto;
     text-align: center;
@@ -13,7 +20,7 @@ main {
   .date {
     text-align: center;
     position: relative;
-    width: 120px;
+    width: 20%;
     padding: 80px 0;
     margin: 0 auto;
   }
@@ -22,28 +29,35 @@ main {
     content: "";
     position: absolute;
     height: 1px;
-    width: 350%;
-    background: darkgray;
+    width: 170%;
+    background: $color-line;
     top: 50%;
-    left: -360%;
+    left: -180%;
   }
 
   .date::after {
     content: "";
     position: absolute;
     height: 1px;
-    width: 350%;
-    background: darkgray;
+    width: 170%;
+    background: $color-line;
     top: 50%;
-    right: -360%;
+    right: -180%;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 3em;
+
+    width: 50%;
+    min-width: 412px;
+    max-width: 500px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
   }
 
   p {
-    width: 50%;
+    width: 35%;
     margin: 0 auto;
     line-height: 35px;
     padding-bottom: 60px;
@@ -88,7 +102,16 @@ main {
       }
     }
     .card-2 {
-      border-right: 1px solid darkgray;
+      border-right: 1px solid $color-line;
     }
+  }
+  button {
+    font-weight: bold;
+    border-style: 4px solid;
+  }
+
+  .card-2 {
+    border-bottom: 1px solid $color-line;
+    border-right: none;
   }
 }
