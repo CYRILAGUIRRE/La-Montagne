@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "font-3";
-  src: url(../assets/font/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/font/MerriweatherSans-ExtraBold.ttf);
 }
 
 * {
@@ -82,5 +82,4 @@ h1,
 h2,
 h3 {
   font-family: $font-3;
-  font-weight: bolder;
 }

@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "font-3";
-  src: url(../assets/font/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/font/MerriweatherSans-ExtraBold.ttf);
 }
 
 * {
@@ -88,7 +88,6 @@ h1,
 h2,
 h3 {
   font-family: "font-3", sans-serif;
-  font-weight: bolder;
 }
 
 header {
@@ -150,13 +149,13 @@ header span:hover {
 
 header span img {
   padding-top: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header span img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
 header nav {
@@ -252,7 +251,7 @@ header nav ul:hover li:not(:hover) {
 }
 
 header .nav-left li {
-  min-width: 150px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
