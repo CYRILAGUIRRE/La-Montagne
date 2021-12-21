@@ -30,7 +30,7 @@ footer {
       width: 100%;
       height: 40px;
       margin: 20px auto;
-      border-color: $color-line;
+      border: 1px solid $color-line;
     }
 
     textarea {
@@ -39,6 +39,7 @@ footer {
       max-width: 100%;
       margin: 20px auto;
       border-color: $color-line;
+      resize: none;
     }
 
     button {
@@ -55,25 +56,32 @@ footer {
     height: 100%;
 
     div {
-      display: flex;
+      display: grid;
       width: 100%;
       align-items: center;
       border-top: 1px solid $color-line;
 
       h4 {
-        padding: 0 60px;
+        text-align: left;
+        margin: 0 15px;
+        font-size: 0.8rem;
       }
 
       p {
         color: rgb(90, 90, 90);
+        padding-left: 15px;
       }
     }
     .address {
+      display: grid;
+      grid-template-columns: 25% 75%;
       p {
         margin-top: 18px;
       }
     }
     .mail {
+      display: grid;
+      grid-template-columns: 30% 1fr;
       p {
         font-family: $font-1;
         text-decoration: underline $color-line;
@@ -81,12 +89,16 @@ footer {
       }
     }
     .phone {
+      display: grid;
+      grid-template-columns: 30% 1fr;
       p {
         text-decoration: underline $color-line;
         text-underline-position: under;
       }
     }
     .soc-logo {
+      display: grid;
+      grid-template-columns: 30% 1fr;
       border-bottom: none;
       ul {
         display: flex;
@@ -98,7 +110,7 @@ footer {
             border: 1px solid;
             border-color: $color-line;
 
-            width: 40px;
+            width: 35px;
             border-radius: 150px;
           }
         }

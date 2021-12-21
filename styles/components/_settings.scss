@@ -1,16 +1,16 @@
 @font-face {
   font-family: "font-1";
-  src: url(../../assets/font/Merriweather-Regular.ttf);
+  src: url(../assets/font/Merriweather-Regular.ttf);
 }
 
 @font-face {
   font-family: "font-2";
-  src: url(../../assets/font/Merriweather-LightItalic.ttf);
+  src: url(../assets/font/Merriweather-LightItalic.ttf);
 }
 
 @font-face {
   font-family: "font-3";
-  src: url(../../assets/font/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/font/MerriweatherSans-VariableFont_wght.ttf);
 }
 
 * {
@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  background: url(./../assets/img/bg.jpg) fixed top/cover;
+  background: url(../assets/img/bg.jpg) fixed top/cover;
   font-family: $font-1;
 
   &:before {
