@@ -1,27 +1,27 @@
 @font-face {
   font-family: "font-1";
-  src: url(../../assets/font/Merriweather-Regular.ttf);
+  src: url(../assets/font/Merriweather-Regular.ttf);
 }
 
 @font-face {
   font-family: "font-2";
-  src: url(../../assets/font/Merriweather-LightItalic.ttf);
+  src: url(../assets/font/Merriweather-LightItalic.ttf);
 }
 
 @font-face {
   font-family: "font-3";
-  src: url(../../assets/font/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/font/MerriweatherSans-VariableFont_wght.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html {
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  background: url(../../assets/img/bg.jpg) fixed top/cover;
+  background: url(../assets/img/bg.jpg) fixed top/cover;
   font-family: "font-1", sans-serif;
 }
 
@@ -42,9 +42,9 @@ body:before {
   left: 0;
   background: #1e252d;
   -webkit-animation: animBefore 1.5s ease forwards;
-          animation: animBefore 1.5s ease forwards;
+  animation: animBefore 1.5s ease forwards;
   -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 @-webkit-keyframes animBefore {
@@ -95,23 +95,23 @@ header {
   height: 100vh;
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   -webkit-animation: headerAnim 1.5s forwards;
-          animation: headerAnim 1.5s forwards;
+  animation: headerAnim 1.5s forwards;
 }
 
 @-webkit-keyframes headerAnim {
   100% {
     -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    transform: translateY(-40px);
     opacity: 1;
   }
 }
@@ -119,7 +119,7 @@ header {
 @keyframes headerAnim {
   100% {
     -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    transform: translateY(-40px);
     opacity: 1;
   }
 }
@@ -154,7 +154,7 @@ header span img {
 
 header span img:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 header nav {
@@ -163,19 +163,19 @@ header nav {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   bottom: -40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 90%;
   height: 70px;
   background: rgba(255, 255, 255, 0.137);
@@ -193,8 +193,8 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 header nav ul li {
@@ -204,11 +204,11 @@ header nav ul li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: "font-3", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
@@ -222,11 +222,11 @@ header nav ul li:first-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header nav ul li:hover {
@@ -237,11 +237,11 @@ header nav ul li:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header nav ul:hover li:not(:hover) {
@@ -259,11 +259,11 @@ header .nav-right {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 250px;
   min-width: 100px;
   padding-right: 20px;
@@ -280,27 +280,29 @@ header .nav-right ul li:first-child {
 
 header .nav-right li:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 750px) {
   header h1 {
     font-size: 2.5rem;
   }
+
   header p {
     font-size: 0.8rem;
     line-height: 30px;
   }
+
   header span {
     display: none;
   }
@@ -376,30 +378,30 @@ main img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   margin: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 main img:hover {
   -webkit-transform: scale(2);
-          transform: scale(2);
+  transform: scale(2);
 }
 
 main .part-2-cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
 }
 
 main .part-2-cards div {
@@ -408,14 +410,14 @@ main .part-2-cards div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main .part-2-cards div span {
@@ -456,21 +458,25 @@ main .card-2 {
   main .date {
     font-size: 0.8rem;
   }
+
   main h2 {
     font-size: 2rem;
   }
+
   main p {
     width: 80%;
   }
+
   main .part-2-cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
+
   main h3 {
     font-size: 1.4rem;
     letter-spacing: 3px;
@@ -483,13 +489,13 @@ footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 15px auto;
   margin-bottom: 40px;
   background: white;
@@ -498,9 +504,9 @@ footer {
 @media screen and (max-width: 860px) {
   footer {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
@@ -510,17 +516,17 @@ footer form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 60px auto;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transform: translateX(10%);
-          transform: translateX(10%);
+  transform: translateX(10%);
 }
 
 footer form div {
@@ -552,7 +558,7 @@ footer .social {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 25% 25% 25% 25%;
-      grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
   border-left: 1px solid rgba(214, 207, 207, 0.651);
   height: 100%;
 }
@@ -563,8 +569,8 @@ footer .social div {
   display: flex;
   width: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-top: 1px solid rgba(214, 207, 207, 0.651);
 }
 
@@ -583,13 +589,13 @@ footer .social .address p {
 footer .social .mail p {
   font-family: "font-1", sans-serif;
   -webkit-text-decoration: underline rgba(214, 207, 207, 0.651);
-          text-decoration: underline rgba(214, 207, 207, 0.651);
+  text-decoration: underline rgba(214, 207, 207, 0.651);
   text-underline-position: under;
 }
 
 footer .social .phone p {
   -webkit-text-decoration: underline rgba(214, 207, 207, 0.651);
-          text-decoration: underline rgba(214, 207, 207, 0.651);
+  text-decoration: underline rgba(214, 207, 207, 0.651);
   text-underline-position: under;
 }
 
@@ -603,8 +609,8 @@ footer .social .soc-logo ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 footer .social .soc-logo ul li {
@@ -617,4 +623,5 @@ footer .social .soc-logo ul li img {
   width: 40px;
   border-radius: 150px;
 }
+
 /*# sourceMappingURL=style.css.map */
